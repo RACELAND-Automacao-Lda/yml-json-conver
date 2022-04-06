@@ -1,0 +1,19 @@
+Paragraph:
+  font:
+    color_theme: ACCENT_2
+    name: Teve quase benfica
+    size: 11
+Section:
+  font:
+    color_theme: ACCENT_2
+    name: Eu estou aqui
+    size: 22
+  heading: Heading 2
+SubSection:
+  font:
+    color_theme: ACCENT_2
+    name: Boas xerife
+    size: 15
+  heading: Heading 3
+Table:
+  style: MediumGrid3-Accent2

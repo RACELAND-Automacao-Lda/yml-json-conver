@@ -1,10 +1,10 @@
+from mando import command, main
 import json
-
 from ruamel.yaml import YAML
 
+@command
 def json2yml(in_file, out_file):
-#in_file = "json_in.json"
-#out_file = "yaml_out.yml"
+
 
     yaml = YAML(typ="safe")
     yaml.default_flow_style = False
@@ -14,4 +14,8 @@ def json2yml(in_file, out_file):
     with open(out_file, "w", encoding="utf-8") as o:
         yaml.dump(data, o)
 
-json2yml("json_in.json","yaml_out.yml")
+    print("job done")
+
+
+if __name__ == '__main__':
+    main()
