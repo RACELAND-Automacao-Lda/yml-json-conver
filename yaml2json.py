@@ -1,10 +1,9 @@
 import json
-
+from mando import command,main
 from ruamel.yaml import YAML
 
+@command
 def yaml2json(in_file,out_file):
-#in_file = "yaml_in.yml"
-#out_file = "json_out.json"
 
     yaml = YAML(typ="safe")
 
@@ -13,5 +12,8 @@ def yaml2json(in_file,out_file):
 
     with open(out_file, "w", encoding="utf-8") as o:
         json.dump(data, o, indent=4, ensure_ascii=False)
+	
+    print("job done")
 
-yaml2json("docker-compose.yml","docker-compose_out.json")
+if __name__ == '__main__':
+    main()
